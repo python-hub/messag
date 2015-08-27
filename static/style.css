@@ -1,0 +1,25 @@
+ li {
+    list-style-type: none; /* Hide markers */
+   }
+
+.level-0 { margin-left: 0px; } /* Indents for comment tree */
+.level-1 { margin-left: 30px; }
+.level-2 { margin-left: 60px; }
+.level-3 { margin-left: 90px; }
+.level-4 { margin-left: 120px; }
+.level-5 { margin-left: 150px; }
+.level-6 { margin-left: 180px; }
+.level-7 { margin-left: 210px; }
+.level-8 { margin-left: 240px; }
+.level-9 { margin-left: 270px; }
+.level-10 { margin-left: 300px; }
+.level-11 { margin-left: 330px; }
+.level-12 { margin-left: 360px; }
+.level-13 { margin-left: 390px; }
+.level-14 { margin-left: 420px; }
+.level-15 { margin-left: 450px; }
+.level-16 { margin-left: 480px; }
+.level-17 { margin-left: 510px; }
+.level-18 { margin-left: 540px; }
+.level-19 { margin-left: 570px; }
+.level-20 { margin-left: 600px; }
