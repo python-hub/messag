@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <a href="{% url 'index' %}">Главная страница</a>
+    <a href="/desk/add/from_{{ request.path|urlencode }}"">Добавить сообщение</a>
+      {% block content %}{% endblock %}
+   </body>
+</html>
