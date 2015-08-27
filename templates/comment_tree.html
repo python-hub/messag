@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+		
+{% for c in comment_tree %}
+<li class ="comment level-{{ c.level|floatformat }}" id="li-{{ c.id }}">
+    <div class="comment-wrapper">
+                <div class="comment-header-author-name">{{ c.author_name }}</div>
+               {{ c.id }} <a class="comment-header-anchor-link" href="/desk/tree/{{ c.path }}/">
+                     {{ c.pub_date|date:'d-m-Y' }} {{ c.pub_date|time:'H:i' }}
+                </a>
+    
+        <div class="comment-content">{{ c.text }}</div>
+            <a href="/desk/reply/{{ c.id }}" class="comment-reply-link" data-id="{{ c.id }}"  data-level="{{ c.level|floatformat }}">Ответить</a>
+			<a href="#" class="comment-cancel-link">Отмена</a>
+        </div>
+</li>
+{% endfor %}
+
+	<div class="comment-form-container">
+	    <form class="comment-form" method="post" action="" id="comment-form">{% csrf_token %}
+	        {{ form.as_p }}
+	        <input type="submit" value="Добавить">
+	    </form>
+	</div>
+
+<script src="/static/jquery-2.1.4.min.js"></script>
+<script src="/static/comment_reply.js"></script>
+<script src="/static/comment_create.js"></script>
+{% endblock %}
